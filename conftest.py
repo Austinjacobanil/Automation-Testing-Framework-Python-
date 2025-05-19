@@ -18,17 +18,14 @@ def browser_setup(request):
     # request.cls.driver = webdriver.chrome(ChromeDriverManager.install(), options=chrome_options)
     request.cls.driver = webdriver.Chrome(service=service, options=chrome_options)
 
-
+#HTML Reports
 @pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
     today = datetime.now()
     report_dir = Path("atReports",today.strftime("%Y%m%d"))
     report_dir.mkdir(parents=True, exist_ok=True)
-    # pytest_html = report_dir / f"Report_{today.strftime("%Y%m%d%H%M")}.html"
     timestamp = today.strftime("%Y%m%d%H%M")
     pytest_html = report_dir / f"Report_{timestamp}.html"
-    # config.option.htmlpath = str(pytest_html)
-
     config.option.htmlpath = pytest_html
     config.option.self_contained_html = True
 
