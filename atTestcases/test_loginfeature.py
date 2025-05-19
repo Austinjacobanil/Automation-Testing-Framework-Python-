@@ -15,5 +15,5 @@ class Test_login:
     def test_valid_login(self):
         self.login_page.login(Username, Password)
 
-    # def teardown_class(self):
-    #     self.driver.quit()
+    def teardown_class(self):
+        self.driver.quit()
