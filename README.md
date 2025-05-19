@@ -11,14 +11,3 @@ This project is an Automation Testing Framework built with Python and Selenium W
 - Browser session setup with fixtures for clean and reusable tests.
 - Configuration for pytest hooks to customize report output.
 
-## Project Structure
-
-Automation-Testing-Framework-Python/
-│
-├── .venv/ # Virtual environment for Python dependencies
-├── atHelper/ # Helper utilities and reusable functions
-├── atPages/ # Page Object Model classes representing web pages
-├── atReports/ # Generated test reports with timestamps
-├── atTestcases/ # Test case scripts written using pytest
-├── conftest.py # Pytest fixtures and hooks configuration
-└── README.md # Project documentation
